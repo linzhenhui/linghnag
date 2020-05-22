@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header activeIndex="2" />
     <Footer />
   </div>
 </template>
@@ -10,7 +10,7 @@ import Header from "./component/Header.vue";
 import Footer from "./component/Footer.vue";
 export default {
   components: {
-    Head: Head,
+    Header: Header,
     Footer: Footer
   }
 };

@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: resolve => require(['../components/index/index.vue'], resolve),
+      name: 'Home',
+      component: resolve => require(['../components/Home/index.vue'], resolve),
       meta: {
         businessName: '',
       }

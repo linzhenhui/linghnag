@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 import './tools/tool.js' // 工具类
 import './tools/ajax.js' // 封装ajax
 import './tools/DateUtil.js' // 日期
@@ -11,18 +12,15 @@ import './tools/native.js' // native
 import './tools/decimal.js' // decimal
 import './tools/validator.js' // 校验工具类
 import './config/global.js'
-
 import store from './store/' // vuex 数据共享
-
 Vue.prototype.$store = store
 Vue.config.productionTip = false// 设置为 false 以阻止 vue 在启动时生成生产提示。
-let vm = new Vue()
+Vue.use(ElementUI);
 
+
+
+let vm = new Vue()
 router.beforeEach((to, from, next) => {
-  vm.toast = vm.$toast.loading({
-    mask: true,
-    duration: 0
-  })
   let meta = to.meta
 
   if (meta.businessName) {
@@ -49,6 +47,6 @@ new Vue({
     eventHub: new Vue()
   },
   components: { App },
-  render: (h) => h(App)
-  // store
+  render: (h) => h(App),
+  store
 })
