@@ -22,7 +22,7 @@
         <img src="../../../static/img/home/icon-kf.png" alt srcset />
         <span>联系我们</span>
       </div>
-      <div v-if="show[2]" class="show txt-l noworp">
+      <div v-if="show[2]" class="show txt_l noworp">
         <p>客服电话：</p>
         <p>0574-22763389</p>
       </div>
@@ -71,6 +71,7 @@ export default {
 <style lang="less">
 #footer {
   height: 100px;
+  width: 100%;
   background: rgba(54, 54, 54, 1);
   display: flex;
   align-items: center;

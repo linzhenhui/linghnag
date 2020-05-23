@@ -3,8 +3,8 @@
     <Header activeIndex="1" />
     <div class="body padding">
       <el-carousel>
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3 class="small">{{ item }}</h3>
+        <el-carousel-item v-for="(item,i) in bannerlist" :key="i">
+          <img :src="item" alt />
         </el-carousel-item>
       </el-carousel>
       <div>
@@ -24,6 +24,11 @@ export default {
     Header: Header,
     kcTable: kcTable,
     Footer: Footer
+  },
+  data() {
+    return {
+      bannerlist: ["/static/img/banner.jpg", "/static/img/banner.jpg"]
+    };
   }
 };
 </script>
@@ -32,12 +37,19 @@ export default {
 #index,
 .body {
   width: 100%;
+
   .el-carousel {
-    background-color: white;
-    width: 1201px;
-    height: 325px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .el-carousel__container {
+      min-width: 1200px;
+      min-height: 325px;
+    }
   }
 }
+
 .body > div {
   margin: 20px 0;
 }

@@ -17,7 +17,7 @@ export default {
   width: 100%;
 }
 .padding {
-  padding: 0 50px;
+  padding: 0 4%;
 }
 a {
   text-decoration: none;
