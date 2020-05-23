@@ -8,7 +8,7 @@
         </el-carousel-item>
       </el-carousel>
       <div>
-        
+        <kcTable />
       </div>
     </div>
     <Footer />
@@ -17,10 +17,12 @@
 
 <script>
 import Header from "../component/Header.vue";
+import kcTable from "../component/kcTable.vue";
 import Footer from "../component/Footer.vue";
 export default {
   components: {
     Header: Header,
+    kcTable: kcTable,
     Footer: Footer
   }
 };
@@ -30,7 +32,6 @@ export default {
 #index,
 .body {
   width: 100%;
-  height: 100%;
   .el-carousel {
     background-color: white;
     width: 1201px;
