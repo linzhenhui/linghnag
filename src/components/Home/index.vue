@@ -1,6 +1,5 @@
 <template>
   <div id="index">
-    <Header activeIndex="1" />
     <div class="body padding">
       <el-carousel>
         <el-carousel-item v-for="(item,i) in bannerlist" :key="i">
@@ -11,25 +10,21 @@
         <kcTable />
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Header from "../component/Header.vue";
 import kcTable from "../component/kcTable.vue";
-import Footer from "../component/Footer.vue";
 export default {
   components: {
-    Header: Header,
-    kcTable: kcTable,
-    Footer: Footer
+    kcTable: kcTable
   },
   data() {
     return {
       bannerlist: ["/static/img/banner.jpg", "/static/img/banner.jpg"]
     };
-  }
+  },
+  methods: {}
 };
 </script>
 

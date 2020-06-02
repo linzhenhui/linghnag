@@ -1,6 +1,6 @@
 <template>
   <div class="ckList">
-    <div v-for="(item,index) in dataList" :key="index" class="ck">
+    <div v-for="(item,index) in dataList" :key="index" class="ck" @click="routerTo(item.id)">
       <span class="cktitle">{{item.title}}</span>
       <p class="name txt_l">{{item.name}}</p>
       <p class="txt_s space_b">
@@ -34,6 +34,7 @@ export default {
     return {
       dataList: [
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -50,6 +51,7 @@ export default {
           lastTime: "23天13:09:42"
         },
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -64,6 +66,7 @@ export default {
           lastTime: "23天13:09:42"
         },
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -78,6 +81,7 @@ export default {
           lastTime: "23天13:09:42"
         },
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -92,6 +96,7 @@ export default {
           lastTime: "23天13:09:42"
         },
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -106,6 +111,7 @@ export default {
           lastTime: "23天13:09:42"
         },
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -120,6 +126,7 @@ export default {
           lastTime: "23天13:09:42"
         },
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -134,6 +141,7 @@ export default {
           lastTime: "23天13:09:42"
         },
         {
+          id: "1",
           title: "考研",
           name: "【联报减500】21考研研春季系统2班",
           time: "2020.04.20 - 06.12",
@@ -149,6 +157,16 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    routerTo(id) {
+      this.$router.push({
+        name: `xq`,
+        query: {
+          ckId: id
+        }
+      });
+    }
   }
 };
 </script>

@@ -1,6 +1,5 @@
 <template>
   <div id="index">
-    <Header activeIndex="2" />
     <div class="body padding">
       <ul class="kyul">
         <li style="font-size:32px;color:rgba(51,51,51,1);">考研</li>
@@ -13,19 +12,14 @@
       </ul>
       <kcTable />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Header from "../component/Header.vue";
 import kcTable from "../component/kcTable.vue";
-import Footer from "../component/Footer.vue";
 export default {
   components: {
-    Header: Header,
-    kcTable: kcTable,
-    Footer: Footer
+    kcTable: kcTable
   },
   data() {
     return {
