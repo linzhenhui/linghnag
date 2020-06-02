@@ -13,7 +13,14 @@ export default new Router({
       meta: {
         businessName: '',
       }
-    },{
+    }, {
+      path: '/kaoyan',
+      name: 'kaoyan',
+      component: resolve => require(['../components/kaoyan/index.vue'], resolve),
+      meta: {
+        businessName: '',
+      }
+    }, {
       path: '/text',
       name: 'text',
       component: resolve => require(['../components/Test.vue'], resolve),

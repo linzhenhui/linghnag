@@ -1,12 +1,16 @@
 <template>
   <div class="padding" id="header">
     <div class="header_top">
-      <div class="logo">
+      <div class="logo float_l">
         <p>{{$store.state.logo.name}}</p>
         <span>{{$store.state.logo.url}}</span>
       </div>
-      <div class="header_r">
-        <div @mouseover="selectStyle  " @mouseout="outStyle" style="display:inline-block;position:relative">
+      <div class="header_r float_r">
+        <div
+          @mouseover="selectStyle  "
+          @mouseout="outStyle"
+          style="display:inline-block;position:relative"
+        >
           <span>APP下载</span>
           <div v-if="show" class="show">
             <img src="../../../static/img/home/download.jpg" />
@@ -17,7 +21,12 @@
         <span>登录/注册</span>
       </div>
     </div>
-    <el-menu :default-active="activeIndex" class="el-menu-demo space_b" mode="horizontal" @select="handleSelect">
+    <el-menu
+      :default-active="activeIndex"
+      class="el-menu-demo space_b"
+      mode="horizontal"
+      @select="handleSelect"
+    >
       <el-menu-item index="1">首页</el-menu-item>
       <el-menu-item index="2">考研</el-menu-item>
       <el-submenu index="3">
@@ -41,53 +50,51 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      activeIndex: {
-        type: String,
-        default: "1"
-      }
-    },
-    data() {
-      return {
-        show: false,
-        routes: {
-          1: "/",
-          2: "/text"
-        },
-        imgcontent: "/static/img/home/dpwnload.jpg"
-      };
-    },
-    methods: {
-      handleSelect(key, keyPath) {
-        this.$router.push(this.routes[key]);
-      },
-      selectStyle() {
-        this.show = true;
-      },
-      outStyle() {
-        this.show = false;
-      }
+export default {
+  props: {
+    activeIndex: {
+      type: String,
+      default: "1"
     }
-  };
+  },
+  data() {
+    return {
+      show: false,
+      routes: {
+        1: "/",
+        2: "/kaoyan"
+      },
+      imgcontent: "/static/img/home/dpwnload.jpg"
+    };
+  },
+  methods: {
+    handleSelect(key, keyPath) {
+      this.$router.push(this.routes[key]);
+    },
+    selectStyle() {
+      this.show = true;
+    },
+    outStyle() {
+      this.show = false;
+    }
+  }
+};
 </script>
 
 <style scoped lang="less">
-  #header {
-    background-color: #ffffff;
+#header {
+  background-color: #ffffff;
 
-    .header_top {
-      border-bottom: 1px solid #eeeeee;
-      margin-bottom: 5px;
-      height: 50px;
-    }
+  .header_top {
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 5px;
+    height: 50px;
+  }
 
-    .logo {
-      width: 104px;
-      background: rgba(255, 95, 95, 1);
-    }
-
-    .logo p {
+  .logo {
+    width: 104px;
+    background: rgba(255, 95, 95, 1);
+    p {
       text-align: center;
       width: 100%;
       height: 20px;
@@ -96,8 +103,7 @@
       color: rgba(255, 255, 255, 1);
       line-height: 23px;
     }
-
-    .logo span {
+    span {
       width: 77px;
       height: 14px;
       font-size: 10px;
@@ -105,34 +111,32 @@
       color: rgba(255, 255, 255, 1);
       line-height: 14px;
     }
-
-    .header_r {
-      line-height: 50px;
-    }
-
-    .header_r span {
+  }
+  .header_r {
+    line-height: 50px;
+    span {
       margin: 0 50px;
     }
-
-    .el-menu {
-      box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.09);
-    }
-
-    .show {
-      z-index: 99;
-      width: 180px;
-      height: 215px;
-      background: rgba(255, 255, 255, 1);
-      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.29);
-      border-radius: 8px;
-      text-align: center;
-      padding: 31px;
-      position: absolute;
-    }
-
-    .show img {
-      width: 117px;
-      height: 117px;
-    }
   }
+  .el-menu {
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.09);
+  }
+
+  .show {
+    z-index: 99;
+    width: 180px;
+    height: 215px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.29);
+    border-radius: 8px;
+    text-align: center;
+    padding: 31px;
+    position: absolute;
+  }
+
+  .show img {
+    width: 117px;
+    height: 117px;
+  }
+}
 </style>
