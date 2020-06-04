@@ -13,6 +13,9 @@ import './tools/decimal.js' // decimal
 import './tools/validator.js' // 校验工具类
 import './config/global.js'
 import store from './store/' // vuex 数据共享
+
+
+
 Vue.prototype.$store = store
 Vue.config.productionTip = false // 设置为 false 以阻止 vue 在启动时生成生产提示。
 Vue.use(ElementUI);

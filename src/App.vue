@@ -24,11 +24,4 @@ export default {
   height: 100%;
   width: 100%;
 }
-.padding {
-  padding: 0 4%;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
 </style>

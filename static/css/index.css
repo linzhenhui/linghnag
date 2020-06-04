@@ -12,6 +12,15 @@ html {
     box-sizing: border-box;
 }
 
+.padding {
+    margin: 0 150px auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 ul li {
     list-style: none;
 }
@@ -29,7 +38,7 @@ ul li {
 }
 
 .txt_s {
-    font-size: 12px;
+    font-size: 15px;
     color: rgba(102, 102, 102, 1);
 }
 
@@ -47,6 +56,12 @@ ul li {
     align-items: center;
 }
 
+.space_c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .space_a {
     display: flex;
     justify-content: space-around;
@@ -55,7 +70,7 @@ ul li {
 
 .red {
     color: red;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 .pos_l {

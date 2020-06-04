@@ -1,47 +1,49 @@
 <template>
-  <div class="padding" id="footer">
-    <div class="logo">
-      <p>{{$store.state.logo.name}}</p>
-      <span>{{$store.state.logo.url}}</span>
-    </div>
-    <div @mouseover="selectStyle(1) " @mouseout="outStyle(1)" style="position:relative">
+  <div id="footer">
+    <div class="padding footer space_b">
+      <div class="logo">
+        <p>{{$store.state.logo.name}}</p>
+        <span>{{$store.state.logo.url}}</span>
+      </div>
+      <div @mouseover="selectStyle(1) " @mouseout="outStyle(1)" style="position:relative">
+        <div class="link">
+          <img src="../../../static/img/home/icon-wx.png" alt srcset />
+          <span>微信公众号</span>
+        </div>
+        <div v-if="show[1]" class="show">
+          <img src="../../../static/img/home/download.jpg" />
+          <p>
+            扫码二维码
+            关注领航微信号
+          </p>
+        </div>
+      </div>
+      <div @mouseover="selectStyle(2) " @mouseout="outStyle(2)" style="position:relative">
+        <div class="link">
+          <img src="../../../static/img/home/icon-kf.png" alt srcset />
+          <span>联系我们</span>
+        </div>
+        <div v-if="show[2]" class="show txt_l noworp">
+          <p>客服电话：</p>
+          <p>0574-22763389</p>
+        </div>
+      </div>
+      <div @mouseover="selectStyle(3) " @mouseout="outStyle(3)" style="position:relative">
+        <div class="link">
+          <img src="../../../static/img/home/icon-APP.png" alt />
+          <span>APP下载</span>
+        </div>
+        <div v-if="show[3]" class="show">
+          <img src="../../../static/img/home/download.jpg" />
+          <p>
+            扫码二维码
+            关注领航微信号
+          </p>
+        </div>
+      </div>
       <div class="link">
-        <img src="../../../static/img/home/icon-wx.png" alt srcset />
-        <span>微信公众号</span>
+        <span>Copyright ©2015-2020 宁波领航教育有限公司</span>
       </div>
-      <div v-if="show[1]" class="show">
-        <img src="../../../static/img/home/download.jpg" />
-        <p>
-          扫码二维码
-          关注领航微信号
-        </p>
-      </div>
-    </div>
-    <div @mouseover="selectStyle(2) " @mouseout="outStyle(2)" style="position:relative">
-      <div class="link">
-        <img src="../../../static/img/home/icon-kf.png" alt srcset />
-        <span>联系我们</span>
-      </div>
-      <div v-if="show[2]" class="show txt_l noworp">
-        <p>客服电话：</p>
-        <p>0574-22763389</p>
-      </div>
-    </div>
-    <div @mouseover="selectStyle(3) " @mouseout="outStyle(3)" style="position:relative">
-      <div class="link">
-        <img src="../../../static/img/home/icon-APP.png" alt />
-        <span>APP下载</span>
-      </div>
-      <div v-if="show[3]" class="show">
-        <img src="../../../static/img/home/download.jpg" />
-        <p>
-          扫码二维码
-          关注领航微信号
-        </p>
-      </div>
-    </div>
-    <div class="link">
-      <span>Copyright ©2015-2020 宁波领航教育有限公司</span>
     </div>
   </div>
 </template>
@@ -68,17 +70,16 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" >
 #footer {
-  height: 100px;
   width: 100%;
   background: rgba(54, 54, 54, 1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: PingFangSC-Light, PingFang SC;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 1);
+  .footer {
+    height: 100px;
+    font-family: PingFangSC-Light, PingFang SC;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+  }
   .logo {
     width: 104px;
   }
